@@ -9,7 +9,8 @@
 
 	<div class="container" style="margin-top: 80px">
 		<?php echo $this->session->flashdata('notif') ?>
-		<a href="<?php echo base_url() ?>buku/tambah/" class="btn btn-md btn-success">Tambah Buku</a>
+		<a href="<?php echo base_url() ?>buku/tambah/" class="btn btn-md btn-success">Tambah Data</a>
+        <a href="<?php echo base_url() ?>buku/" class="btn btn-md btn-success">Data</a>
 		<hr>
 		<!-- table -->
 		<div class="table-responsive">
@@ -17,30 +18,28 @@
 			    <thead>
 			      <tr>
 			        <th>No.</th>
-			        <th>No ISBN</th>
-			        <th>Nama Buku</th>
-			        <th>Tanggal Terbit</th>
-			        <th>Pengarang</th>
-			        <th>Options</th>
+			        <th>Deskripsi</th>
+			        <th>Kategori</th>
+			        <th>Tanggal Bayar</th>
+			        <th>Nama Transaksi</th>
+					<th>Nominal(RP)</th>
 			      </tr>
 			    </thead>
 			    <tbody>
 
 			    <?php
 			    	$no = 1; 
-			    	foreach($data_buku as $hasil){ 
+			    	foreach($list_transaksi as $hasil){ 
 			    ?>
 			      
 			      <tr>
 			        <td><?php echo $no++ ?></td>
-			        <td><?php echo $hasil->no_isbn ?></td>
-			        <td><?php echo $hasil->nama_buku ?></td>
-			        <td><?php echo $hasil->tanggal_terbit ?></td>
-			        <td><?php echo $hasil->pengarang ?></td>
-			        <td>
-			        	<a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-			        	<a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger">Hapus</a>
-			        </td>
+			        <td><?php echo $hasil->deskripsi ?></td>
+			        <td><?php echo $hasil->kategori ?></td>
+			        <td><?php echo $hasil->tanggal_bayar ?></td>
+			        <td><?php echo $hasil->nama_transaksi ?></td>
+					<td><?php echo $hasil->nominal ?></td>
+
 			      </tr>
 
 			    <?php } ?>

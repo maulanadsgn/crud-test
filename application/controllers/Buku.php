@@ -17,11 +17,23 @@ class Buku extends CI_Controller {
 		$data = array(
 
 			'title' 	=> 'Data Buku',
-			'data_buku'	=> $this->model_buku->get_all(),
+			'data_transaksi'	=> $this->model_buku->get_all(),
 
 		);
 
-		$this->load->view('data_buku', $data);
+		$this->load->view('data_transaksi', $data);
+	}
+
+	public function list()
+	{
+		$data = array(
+
+			'title' 	=> 'Data Buku',
+			'list_transaksi'	=> $this->model_buku->get_all(),
+
+		);
+
+		$this->load->view('list_transaksi', $data);
 	}
 
 	public function tambah()
@@ -39,10 +51,11 @@ class Buku extends CI_Controller {
 	{
 		$data = array(
 
-			'no_isbn' 			=> $this->input->post("no_isbn"),
-			'nama_buku' 		=> $this->input->post("nama_buku"),
-			'tanggal_terbit' 	=> $this->input->post("tanggal_terbit"),
-			'pengarang' 		=> $this->input->post("pengarang"),
+			'deskripsi' 			=> $this->input->post("deskripsi"),
+			'kategori' 		=> $this->input->post("kategori"),
+			'tanggal_bayar' 	=> $this->input->post("tanggal_bayar"),
+			'nama_transaksi' 		=> $this->input->post("nama_transaksi"),
+			'nominal'	=> $this->input->post("nominal"),
 			
 		);
 
@@ -63,7 +76,7 @@ class Buku extends CI_Controller {
 		$data = array(
 
 			'title' 	=> 'Edit Data Buku',
-			'data_buku' => $this->model_buku->edit($id_buku)
+			'data_transaksi' => $this->model_buku->edit($id_buku)
 
 		);
 
@@ -75,10 +88,11 @@ class Buku extends CI_Controller {
 		$id['id_buku'] = $this->input->post("id_buku");
 		$data = array(
 
-			'no_isbn' 			=> $this->input->post("no_isbn"),
-			'nama_buku' 		=> $this->input->post("nama_buku"),
-			'tanggal_terbit' 	=> $this->input->post("tanggal_terbit"),
-			'pengarang' 		=> $this->input->post("pengarang"),
+			'deskripsi' 			=> $this->input->post("deskripsi"),
+			'kategori' 		=> $this->input->post("kategori"),
+			'tanggal_bayar' 	=> $this->input->post("tanggal_bayar"),
+			'nama_transaksi' 		=> $this->input->post("nama_transaksi"),
+			'nominal'	=> $this->input->post("nominal"),
 			
 		);
 

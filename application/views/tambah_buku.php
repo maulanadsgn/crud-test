@@ -12,27 +12,33 @@
 			<?php echo form_open('buku/simpan') ?>
 			  
 			  <div class="form-group">
-			    <label for="text">No ISBN</label>
-			    <input type="text" name="no_isbn" class="form-control" placeholder="Masukkan No. ISBN">
+			    <label for="text">Deskripsi</label>
+			    <input type="text" name="deskripsi" class="form-control" placeholder="Masukkan Deskripsi">
 			  </div>
 
 			  <div class="form-group">
-			    <label for="text">Nama Buku</label>
-			    <input type="text" name="nama_buku" class="form-control" placeholder="Masukkan Nama Buku">
+			    <label for="text">Kategori</label>
+			    <input type="text" name="kategori" class="form-control" placeholder="Masukkan Kategori">
 			  </div>
 
 			  <div class="form-group">
-			    <label for="text">Tanggal Terbit</label>
-			    <input type="date" name="tanggal_terbit" class="form-control" >
+			    <label for="text">Tanggal Bayar</label>
+			    <input type="date" name="tanggal_bayar" class="form-control" >
 			  </div>
 
 			  <div class="form-group">
-			    <label for="text">Pengarang</label>
-			    <input type="text" name="pengarang" class="form-control" >
+			    <label for="text">Nama Transaksi</label>
+			    <input type="text" name="nama_transaksi" class="form-control" >
+			  </div>
+
+			  <div class="form-group">
+			    <label for="text">Nominal</label>
+			    <input type="text" name="nominal" class="form-control" >
 			  </div>
 			  
 			  <button type="submit" class="btn btn-md btn-success">Simpan</button>
 			  <button type="reset" class="btn btn-md btn-warning">reset</button>
+			  <a href="<?php echo base_url() ?>buku/" class="btn btn-md btn-success">Kembali</a>
 			<?php echo form_close() ?>
 		</div>
 	</div>
